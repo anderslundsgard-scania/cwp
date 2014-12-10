@@ -26,6 +26,9 @@ if (Test-Path -Path $tempdir)
 New-Item -ItemType directory -Path $tempdir
 Set-Location -Path $tempdir
 
+git config --global user.email "noreply@scania.com"
+git config --global user.name "Auto Deploy User"
+
 git clone $azuregitrepouri
 
 Remove-Item $repopathallfiles 
