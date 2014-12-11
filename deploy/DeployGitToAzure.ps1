@@ -1,6 +1,7 @@
 param(
   [string]$rootpath
   ,[string]$reponame
+  ,[string]$reposlotname
   ,[string]$distpath
   ,[string]$repopass
   ,[string]$repousername
@@ -16,7 +17,7 @@ $tempdir = "tempdirforgitpublishtoazure"
 $repopath = $rootpath + "\" + $tempdir + "\" + $reponame
 $repopathallfiles = $repopath + "\*"
 $distallfiles = $distpath + "\*"
-$azuregitrepouri = "https://" + $repousername + ":" + $repopass + "@" + $reponame + ".scm.azurewebsites.net:443/" + $reponame + ".git"
+$azuregitrepouri = "https://" + $repousername + ":" + $repopass + "@" + $reposlotname + ".scm.azurewebsites.net:443/" + $reponame + ".git"
 
 Set-Location -Path $rootpath
 if (Test-Path -Path $tempdir) 
