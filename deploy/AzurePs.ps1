@@ -1,4 +1,6 @@
-﻿Clear-Host
+﻿$newSite = New-AzureWebsite -Name "Prod"
+
+Clear-Host
 Import-AzurePublishSettingsFile -PublishSettingsFile "C:\Azure\CWP-App-based messaging for FMP-12-10-2014-credentials.publishsettings"
 #Add-AzureAccount
 #Get-AzureSubscription #Info about the subscription
@@ -20,3 +22,6 @@ Switch-AzureWebsiteSlot -Name cwpbeta -Force
 
 #https://cwpazuredeployuser@cwpbeta-cwpbetasecondslot.scm.azurewebsites.net:443/cwpbeta.git
 #https://cwpazuredeployuser@cwpbeta                  .scm.azurewebsites.net:443/cwpbeta.git
+
+
+
